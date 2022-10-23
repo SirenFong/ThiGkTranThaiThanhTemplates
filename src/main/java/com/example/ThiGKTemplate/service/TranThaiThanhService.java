@@ -18,9 +18,7 @@ public class TranThaiThanhService {
 
 	public String addOne(TranThaiThanhEntity thaithanhEntity) {
 		HttpHeaders headers = new HttpHeaders();
-		headers.setAccept(Arrays.asList(MediaType.APPLICATION
-				\
-				_JSON));
+		headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
 		return rest.postForEntity(url, thaithanhEntity, String.class).getBody();
 	}
 	public TranThaiThanhEntity getOne(String id) {
